@@ -68,19 +68,18 @@ function addtocart(obj){
 	var name1String = cartarray.toString().replace(/,/g," ");
 	document.getElementById("one1").innerHTML = name1String + "Total<br>Tax<br>Incl.Total<br>Total after discount"
 	price.push(obj.price, "<br>");
-	console.log(price)
 	var pricestring = price.toString().replace(/<br>/g, "").replace(/£/g, "").replace(/,,/g,"+");
 	var nameString = price.toString().replace(/,/g," ");
-	console.log(pricestring)
 	var totalcost = eval(pricestring.slice(0, -1))
-	console.log(totalcost)
-		if (100 < totalcost * 1.22 < 200 ) {
-		var discount = .93
-	}
-	else if (totalcost*1.22 > 200){
+	if (totalcost*1.22 > 200){
 		var discount = .88
 	}
-	document.getElementById("price").innerHTML = nameString + "£" + totalcost + "<br> £" + totalcost*.22.toFixed(2) + "<br> £" + totalcost*1.22.toFixed(2) + "<br> £" + ((totalcost*1.22)*discount).toFixed(2)
+	else if (totalcost * 1.22 > 100)  {
+		var discount = .93
+	}
+	console.log(discount)
+
+	document.getElementById("price").innerHTML = nameString + "£" + totalcost + "<br> £" + (totalcost*.22).toFixed(2) + "<br> £" + (totalcost*1.22).toFixed(2) + "<br> £" + ((totalcost*1.22)*discount).toFixed(2)
 	
 
 } 
