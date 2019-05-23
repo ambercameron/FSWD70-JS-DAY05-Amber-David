@@ -65,8 +65,12 @@
 			<div class= "bold">
 				<a href="https://www.amazon.com/gp/css/order-history?ref_=nav_orders_first">Orders</a>
 			</div>
-			<div>
-				<button type="button" onclick="displaycart()"><img src="cart.png" alt="Cart Image"></button>
+			<div class="dropdown">
+				<button class="dropbtn" type="button" onclick="displaycart()"><img src="cart.png" alt="Cart Image"></button>
+				<div class="dropdown-content">
+					<p id="one1"></p>
+					<p id="price"></p>
+				</div>
 			</div>
 		</div>
 	</nav>
@@ -74,6 +78,9 @@
 		<h1>Some Items You Might Like</h1>
 
 		<table id="visual"></table>
+		<p id="one"></p>
+
+
 
 
 <script src="script.js"></script>	
