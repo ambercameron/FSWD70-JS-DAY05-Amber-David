@@ -90,7 +90,7 @@ var employees = {
 	var i = 0
 	for (i = 0; i < employees.dunder_mifflin.length; i++) 
 	{ 
-		document.getElementById("inter01").innerHTML = "<td><table border='1' width=200 ><tr><td><b>Employee Number</b></td><td width=100>" + employees.dunder_mifflin[i].unique_id + 
+		document.getElementById("inter01").innerHTML += "<td><table border='1' width=200 ><tr><td><b>Employee Number</b></td><td width=100>" + employees.dunder_mifflin[i].unique_id + 
 		"</td></tr><tr><td><b>First Name</b></td><td width=100>" + employees.dunder_mifflin[i].first_name + 
 		"</td></tr><tr><td><b>Second Name</b></td><td width=100>" + employees.dunder_mifflin[i].second_name + 
 		"</td></tr><tr><td><b>email_address</b></td><td width=100>" + employees.dunder_mifflin[i].email_address + 
